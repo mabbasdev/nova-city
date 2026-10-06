@@ -54,7 +54,7 @@ export default function SiteVisitCTA() {
                 </div>
 
                 {/* Dynamic Light Beam Glow */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-[#C8A261]/15 blur-[170px] rounded-full pointer-events-none z-0" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-[#dd9b2a]/15 blur-[170px] rounded-full pointer-events-none z-0" />
 
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
 
@@ -73,16 +73,16 @@ export default function SiteVisitCTA() {
                         <div className="absolute -bottom-1.5 -right-1.5 w-4 h-4 border-b-2 border-r-2 border-[#C8A261]" />
 
                         {/* Badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C8A261]/40 bg-[#C8A261]/10 mb-6">
-                            <Compass className="w-3.5 h-3.5 text-[#C8A261] animate-spin-slow" />
-                            <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A261] font-bold">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C8A261]/40 bg-[#dd9b2a]/10 mb-6">
+                            <Compass className="w-3.5 h-3.5 text-[#f5ac2e] animate-spin-slow" />
+                            <span className="text-[10px] uppercase tracking-[0.25em] text-[#f5ac2e] font-bold">
                                 BOOK A SITE VISIT
                             </span>
                         </div>
 
                         {/* Main Heading */}
                         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.12] mb-6">
-                            See <span className="text-[#C8A261] font-semibold">NOVA City</span> For Yourself
+                            See <span className="text-[#f5ac2e] font-semibold">NOVA City</span> For Yourself
                         </h2>
 
                         {/* Subtext */}
@@ -94,7 +94,7 @@ export default function SiteVisitCTA() {
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
                             <Button
                                 onClick={() => setIsModalOpen(true)}
-                                className="w-full sm:w-auto bg-[#C8A261] hover:bg-[#b08d4f] text-[#0B0B0B] font-semibold text-xs tracking-[0.18em] uppercase px-9 h-14 rounded-none transition-all duration-300 shadow-[0_0_25px_rgba(200,162,97,0.3)] hover:shadow-[0_0_35px_rgba(200,162,97,0.5)] group flex items-center justify-center gap-3"
+                                className="w-full sm:w-auto bg-[#dd9b2a] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.18em] uppercase px-9 h-14 rounded-none transition-all duration-300 shadow-[0_0_25px_rgba(200,162,97,0.3)] hover:shadow-[0_0_35px_rgba(200,162,97,0.5)] group flex items-center justify-center gap-3"
                             >
                                 <span>BOOK SITE VISIT NOW</span>
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -103,10 +103,10 @@ export default function SiteVisitCTA() {
                             <Button
                                 asChild
                                 variant="outline"
-                                className="w-full sm:w-auto border-white/20 hover:border-[#C8A261] text-white hover:text-[#C8A261] hover:bg-white/5 font-semibold text-xs tracking-[0.18em] uppercase px-8 h-14 rounded-none transition-all duration-300 flex items-center justify-center gap-2"
+                                className="w-full sm:w-auto border-white/20 hover:border-[#C8A261] text-white hover:text-[#f5ac2e] hover:bg-white/5 font-semibold text-xs tracking-[0.18em] uppercase px-8 h-14 rounded-none transition-all duration-300 flex items-center justify-center gap-2"
                             >
                                 <a href="tel:+923000000000">
-                                    <PhoneCall className="w-4 h-4 text-[#C8A261]" />
+                                    <PhoneCall className="w-4 h-4 text-[#f5ac2e]" />
                                     <span>CALL ADVISOR DIRECT</span>
                                 </a>
                             </Button>
@@ -115,7 +115,7 @@ export default function SiteVisitCTA() {
                         {/* Feature Highlights Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8 border-t border-white/10 text-left">
                             <div className="flex items-center gap-3 p-3 bg-[#121212]/80 border border-white/5 rounded-xs">
-                                <div className="p-2 bg-[#1A1A1A] text-[#C8A261] rounded-xs">
+                                <div className="p-2 bg-[#1A1A1A] text-[#f5ac2e] rounded-xs">
                                     <Sparkles className="w-4 h-4" />
                                 </div>
                                 <div>
@@ -125,7 +125,7 @@ export default function SiteVisitCTA() {
                             </div>
 
                             <div className="flex items-center gap-3 p-3 bg-[#121212]/80 border border-white/5 rounded-xs">
-                                <div className="p-2 bg-[#1A1A1A] text-[#C8A261] rounded-xs">
+                                <div className="p-2 bg-[#1A1A1A] text-[#f5ac2e] rounded-xs">
                                     <Car className="w-4 h-4" />
                                 </div>
                                 <div>
@@ -135,7 +135,7 @@ export default function SiteVisitCTA() {
                             </div>
 
                             <div className="flex items-center gap-3 p-3 bg-[#121212]/80 border border-white/5 rounded-xs">
-                                <div className="p-2 bg-[#1A1A1A] text-[#C8A261] rounded-xs">
+                                <div className="p-2 bg-[#1A1A1A] text-[#f5ac2e] rounded-xs">
                                     <Building2 className="w-4 h-4" />
                                 </div>
                                 <div>
@@ -168,7 +168,7 @@ export default function SiteVisitCTA() {
                             </button>
 
                             <div className="mb-6">
-                                <span className="text-[10px] font-mono font-bold tracking-widest text-[#C8A261] uppercase">
+                                <span className="text-[10px] font-mono font-bold tracking-widest text-[#f5ac2e] uppercase">
                                     OFFICIAL SITE VISIT APPOINTMENT
                                 </span>
                                 <h3 className="text-2xl font-bold text-white mt-1">Schedule Your Inspection</h3>
@@ -179,7 +179,7 @@ export default function SiteVisitCTA() {
 
                             {isSubmitted ? (
                                 <div className="py-12 text-center flex flex-col items-center justify-center space-y-3">
-                                    <CheckCircle2 className="w-12 h-12 text-[#C8A261] animate-bounce" />
+                                    <CheckCircle2 className="w-12 h-12 text-[#f5ac2e] animate-bounce" />
                                     <h4 className="text-lg font-semibold text-white">Site Visit Scheduled!</h4>
                                     <p className="text-xs text-gray-400 max-w-xs">
                                         Our team will contact you shortly to confirm your slot and timing details.
@@ -244,7 +244,7 @@ export default function SiteVisitCTA() {
 
                                     <Button
                                         type="submit"
-                                        className="w-full bg-[#C8A261] hover:bg-[#b08d4f] text-[#0B0B0B] font-semibold text-xs tracking-[0.18em] uppercase h-12 rounded-none transition-all duration-300 mt-4"
+                                        className="w-full bg-[#dd9b2a] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.18em] uppercase h-12 rounded-none transition-all duration-300 mt-4"
                                     >
                                         CONFIRM APPOINTMENT
                                     </Button>

@@ -88,14 +88,14 @@ export default function Footer() {
                     {/* Brand Info */}
                     <div className="lg:col-span-4 space-y-6">
                         <Link href="/" className="inline-flex items-center gap-4 group">
-                            <div className="w-12 h-12 border border-[#C8A261] flex items-center justify-center transform rotate-45 bg-[#C8A261]/10">
-                                <span className="transform -rotate-45 font-mono text-sm font-bold text-[#C8A261]">NC</span>
+                            <div className="w-12 h-12 border border-[#C8A261] flex items-center justify-center transform rotate-45 bg-[#dd9b2a]/10">
+                                <span className="transform -rotate-45 font-mono text-sm font-bold text-[#f5ac2e]">NC</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-2xl font-bold tracking-[0.2em] text-white uppercase font-serif group-hover:text-[#C8A261] transition-colors">
+                                <span className="text-2xl font-bold tracking-[0.2em] text-white uppercase font-serif group-hover:text-[#f5ac2e] transition-colors">
                                     NOVA CITY
                                 </span>
-                                <span className="text-xs tracking-[0.4em] text-[#C8A261] font-semibold uppercase">
+                                <span className="text-xs tracking-[0.4em] text-[#f5ac2e] font-semibold uppercase">
                                     ISLAMABAD
                                 </span>
                             </div>
@@ -126,7 +126,7 @@ export default function Footer() {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             aria-label={social.label}
-                                            className="p-2 rounded-full text-gray-400 bg-white/5 border border-white/10 hover:border-[#C8A261]/60 hover:text-[#C8A261] hover:bg-[#C8A261]/10 hover:-translate-y-1 hover:scale-110 transition-all duration-300 ease-out flex items-center justify-center"
+                                            className="p-2 rounded-full text-gray-400 bg-white/5 border border-white/10 hover:border-[#C8A261]/60 hover:text-[#f5ac2e] hover:bg-[#dd9b2a]/10 hover:-translate-y-1 hover:scale-110 transition-all duration-300 ease-out flex items-center justify-center"
                                         >
                                             <IconComponent className="w-4 h-4" />
                                         </a>
@@ -138,7 +138,7 @@ export default function Footer() {
 
                     {/* EXPLORE COLUMN */}
                     <div className="lg:col-span-3 space-y-3">
-                        <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-[#C8A261] mb-4">
+                        <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-[#f5ac2e] mb-4">
                             EXPLORE
                         </h4>
                         <ul className="space-y-2.5">
@@ -153,9 +153,9 @@ export default function Footer() {
                                 <li key={i}>
                                     <Link
                                         href={link.href}
-                                        className="inline-flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-[#C8A261] hover:underline underline-offset-4 transition-colors font-medium"
+                                        className="inline-flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-[#f5ac2e] hover:underline underline-offset-4 transition-colors font-medium"
                                     >
-                                        <ChevronRight className="w-3.5 h-3.5 text-[#C8A261] shrink-0" />
+                                        <ChevronRight className="w-3.5 h-3.5 text-[#f5ac2e] shrink-0" />
                                         <span>{link.label}</span>
                                     </Link>
                                 </li>
@@ -164,7 +164,7 @@ export default function Footer() {
                     </div>
                     {/* PORTALS COLUMN */}
                     <div className="lg:col-span-2 space-y-3">
-                        <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-[#C8A261] mb-4">
+                        <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-[#f5ac2e] mb-4">
                             PORTALS
                         </h4>
                         <ul className="space-y-2.5">
@@ -178,9 +178,9 @@ export default function Footer() {
                                 <li key={i}>
                                     <Link
                                         href={link.href}
-                                        className="inline-flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-[#C8A261] hover:underline underline-offset-4 transition-colors font-medium"
+                                        className="inline-flex items-center gap-2 text-xs sm:text-[13px] text-gray-200 hover:text-[#f5ac2e] hover:underline underline-offset-4 transition-colors font-medium"
                                     >
-                                        <ChevronRight className="w-3.5 h-3.5 text-[#C8A261] shrink-0" />
+                                        <ChevronRight className="w-3.5 h-3.5 text-[#f5ac2e] shrink-0" />
                                         <span>{link.label}</span>
                                     </Link>
                                 </li>
@@ -191,7 +191,7 @@ export default function Footer() {
                     {/* HEAD OFFICE COLUMN */}
                     <div className="lg:col-span-3 space-y-3">
                         <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-                            <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-[#C8A261] flex items-center gap-2">
+                            <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-[#f5ac2e] flex items-center gap-2">
                                 <Building2 className="w-3.5 h-3.5" />
                                 <span>HEAD OFFICE</span>
                             </h4>
@@ -207,7 +207,7 @@ export default function Footer() {
                         <div className="space-y-3">
                             {/* Location */}
                             <div className="flex items-start gap-3">
-                                <MapPin className="w-4 h-4 text-[#C8A261] shrink-0 mt-0.5" />
+                                <MapPin className="w-4 h-4 text-[#f5ac2e] shrink-0 mt-0.5" />
                                 <div className="space-y-0.5">
                                     <span className="text-[10px] font-semibold uppercase text-gray-400 tracking-wider block">
                                         LOCATION
@@ -220,14 +220,14 @@ export default function Footer() {
 
                             {/* Phone */}
                             <div className="flex items-start gap-3">
-                                <Phone className="w-4 h-4 text-[#C8A261] shrink-0 mt-0.5" />
+                                <Phone className="w-4 h-4 text-[#f5ac2e] shrink-0 mt-0.5" />
                                 <div className="space-y-0.5">
                                     <span className="text-[10px] font-semibold uppercase text-gray-400 tracking-wider block">
                                         PHONE UAN
                                     </span>
                                     <a
                                         href="tel:0511111116682"
-                                        className="text-xs sm:text-[13px] font-mono text-gray-200 hover:text-[#C8A261] hover:underline underline-offset-4 transition-colors font-medium"
+                                        className="text-xs sm:text-[13px] font-mono text-gray-200 hover:text-[#f5ac2e] hover:underline underline-offset-4 transition-colors font-medium"
                                     >
                                         051 111 111 66 82
                                     </a>
@@ -236,14 +236,14 @@ export default function Footer() {
 
                             {/* Email */}
                             <div className="flex items-start gap-3">
-                                <Mail className="w-4 h-4 text-[#C8A261] shrink-0 mt-0.5" />
+                                <Mail className="w-4 h-4 text-[#f5ac2e] shrink-0 mt-0.5" />
                                 <div className="space-y-0.5">
                                     <span className="text-[10px] font-semibold uppercase text-gray-400 tracking-wider block">
                                         EMAIL ENQUIRIES
                                     </span>
                                     <a
                                         href="mailto:info@novacity.pk"
-                                        className="text-xs sm:text-[13px] text-gray-200 hover:text-[#C8A261] hover:underline underline-offset-4 transition-colors font-medium"
+                                        className="text-xs sm:text-[13px] text-gray-200 hover:text-[#f5ac2e] hover:underline underline-offset-4 transition-colors font-medium"
                                     >
                                         info@novacity.pk
                                     </a>
@@ -257,14 +257,14 @@ export default function Footer() {
                 {/* Operating Hours & RDA Strip */}
                 <div className="py-5 border-b border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-200">
                     <div className="flex items-center gap-2.5 flex-wrap justify-center sm:justify-start">
-                        <Clock className="w-4 h-4 text-[#C8A261] shrink-0" />
+                        <Clock className="w-4 h-4 text-[#f5ac2e] shrink-0" />
                         <span className="font-bold uppercase tracking-wider text-xs text-gray-400">HOURS (PKT):</span>
                         <span>Mon–Fri: <strong className="text-white font-semibold">10:00 AM — 6:00 PM</strong></span>
                         <span className="text-gray-600 hidden sm:inline">•</span>
                         <span>Sat: <strong className="text-white font-semibold">11:00 AM — 5:00 PM</strong></span>
                     </div>
 
-                    <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-[#C8A261] uppercase tracking-wider">
+                    <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-[#f5ac2e] uppercase tracking-wider">
                         <ShieldCheck className="w-4.5 h-4.5 shrink-0" />
                         <span>PHATA & RDA APPROVED MASTER PLAN</span>
                     </div>
@@ -281,29 +281,29 @@ export default function Footer() {
                     </div>
 
                     <div className="flex items-center gap-4 flex-wrap justify-center md:justify-end">
-                        <Link href="#privacy" className="hover:text-[#C8A261] hover:underline underline-offset-4 transition-colors">Privacy Policy</Link>
+                        <Link href="#privacy" className="hover:text-[#f5ac2e] hover:underline underline-offset-4 transition-colors">Privacy Policy</Link>
                         <span className="text-gray-600">•</span>
-                        <Link href="#terms" className="hover:text-[#C8A261] hover:underline underline-offset-4 transition-colors">Terms of Service</Link>
+                        <Link href="#terms" className="hover:text-[#f5ac2e] hover:underline underline-offset-4 transition-colors">Terms of Service</Link>
                         <span className="text-gray-600">•</span>
-                        <Link href="#disclaimer" className="hover:text-[#C8A261] hover:underline underline-offset-4 transition-colors">NOC & Legal Disclaimer</Link>
+                        <Link href="#disclaimer" className="hover:text-[#f5ac2e] hover:underline underline-offset-4 transition-colors">NOC & Legal Disclaimer</Link>
                     </div>
                 </div>
 
                 {/* Developer Attribution */}
                 <div className="pt-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
                     <div className="flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5 text-[#C8A261]" />
+                        <Sparkles className="w-3.5 h-3.5 text-[#f5ac2e]" />
                         <span>Designed & Engineered for High Performance</span>
                     </div>
 
                     <div className="flex items-center gap-1">
-                        <Code className="w-3.5 h-3.5 text-[#C8A261]" />
+                        <Code className="w-3.5 h-3.5 text-[#f5ac2e]" />
                         <span>Crafted by</span>
                         <a
                             href="https://abbas-portfolio-dev.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#C8A261] hover:underline underline-offset-2 font-medium hover:text-white transition-colors"
+                            className="text-[#f5ac2e] hover:underline underline-offset-2 font-medium hover:text-white transition-colors"
                         >
                             Muhammad Abbas
                         </a>
@@ -316,7 +316,7 @@ export default function Footer() {
             <button
                 onClick={scrollToTop}
                 aria-label="Back to Top"
-                className={`fixed bottom-6 right-6 z-50 p-3 bg-[#0A0A0A] border border-[#C8A261]/60 text-[#C8A261] hover:text-white rounded-full transition-all duration-300 ${showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+                className={`fixed bottom-6 right-6 z-50 p-3 bg-[#0A0A0A] border border-[#C8A261]/60 text-[#f5ac2e] hover:text-white rounded-full transition-all duration-300 ${showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
                     }`}
             >
                 <ArrowUp className="w-5 h-5" />

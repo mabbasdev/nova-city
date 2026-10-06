@@ -71,8 +71,8 @@ export default function Features() {
     <section id="features" className="py-28 bg-[#090909] text-[#E5E5E5] relative overflow-hidden">
       {/* Background Ambient Glows & Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[#C8A261]/10 blur-[180px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#C8A261]/10 blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[#dd9b2a]/10 blur-[180px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#dd9b2a]/10 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -82,10 +82,10 @@ export default function Features() {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#C8A261]/40 bg-[#C8A261]/10 mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#C8A261]/40 bg-[#dd9b2a]/10 mb-4"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C8A261] animate-pulse" />
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A261] font-bold">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#dd9b2a] animate-pulse" />
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#f5ac2e] font-bold">
               COMMUNITY FEATURES
             </span>
           </motion.div>
@@ -97,7 +97,7 @@ export default function Features() {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-5xl font-normal text-white tracking-tight leading-tight"
           >
-            Why Choose <span className="text-[#C8A261] font-semibold">NOVA City?</span>
+            Why Choose <span className="text-[#f5ac2e] font-semibold">NOVA City?</span>
           </motion.h2>
 
           <motion.p
@@ -133,7 +133,7 @@ export default function Features() {
                 <div>
                   {/* Card Header Bar */}
                   <div className="flex items-center justify-between mb-6">
-                    <div className="p-3 bg-[#181818] border border-white/10 group-hover:border-[#C8A261]/50 group-hover:bg-[#C8A261]/10 rounded-sm text-[#C8A261] transition-all duration-300 shadow-inner">
+                    <div className="p-3 bg-[#181818] border border-white/10 group-hover:border-[#C8A261]/50 group-hover:bg-[#dd9b2a]/10 rounded-sm text-[#f5ac2e] transition-all duration-300 shadow-inner">
                       <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
 
@@ -141,7 +141,7 @@ export default function Features() {
                       <span className="text-[9px] uppercase tracking-[0.2em] font-semibold text-gray-400 border border-white/10 px-2 py-0.5 rounded-xs bg-white/5">
                         {feature.metric}
                       </span>
-                      <span className="text-xs font-mono text-gray-500 group-hover:text-[#C8A261] transition-colors font-bold">
+                      <span className="text-xs font-mono text-gray-500 group-hover:text-[#f5ac2e] transition-colors font-bold">
                         {feature.id}
                       </span>
                     </div>
@@ -149,12 +149,12 @@ export default function Features() {
 
                   {/* Title & Tag */}
                   <div className="mb-3">
-                    <span className="text-[9px] uppercase tracking-[0.22em] font-semibold text-[#C8A261] mb-1 block">
+                    <span className="text-[9px] uppercase tracking-[0.22em] font-semibold text-[#f5ac2e] mb-1 block">
                       {feature.tag}
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-white group-hover:text-[#C8A261] transition-colors duration-300 flex items-center justify-between">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-white group-hover:text-[#f5ac2e] transition-colors duration-300 flex items-center justify-between">
                       <span>{feature.title}</span>
-                      <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 text-[#C8A261]" />
+                      <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 text-[#f5ac2e]" />
                     </h3>
                   </div>
 
@@ -167,10 +167,10 @@ export default function Features() {
                 {/* Card Footer Bar */}
                 <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-[10px] text-gray-400 group-hover:text-white transition-colors font-medium">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#C8A261]" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#f5ac2e]" />
                     <span>Included in Master Plan</span>
                   </div>
-                  <div className="w-10 h-[1px] bg-white/10 group-hover:w-16 group-hover:bg-[#C8A261] transition-all duration-500" />
+                  <div className="w-10 h-[1px] bg-white/10 group-hover:w-16 group-hover:bg-[#dd9b2a] transition-all duration-500" />
                 </div>
               </motion.div>
             );

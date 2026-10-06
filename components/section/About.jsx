@@ -52,7 +52,7 @@ export default function About() {
   return (
     <section id="about" className="py-28 bg-[#0B0B0B] text-[#E5E5E5] relative overflow-hidden">
       {/* Background Ambient Glow */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C8A261]/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#dd9b2a]/10 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
@@ -68,8 +68,8 @@ export default function About() {
             {/* Top Bar: Strategic Connectivity Locations */}
             <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#C8A261]" />
-                <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A261] font-semibold">
+                <MapPin className="w-3.5 h-3.5 text-[#f5ac2e]" />
+                <span className="text-[10px] uppercase tracking-[0.25em] text-[#f5ac2e] font-semibold">
                   STRATEGIC CONNECTIVITY
                 </span>
               </div>
@@ -78,7 +78,7 @@ export default function About() {
                   <span key={loc} className="flex items-center gap-2">
                     <span>{loc}</span>
                     {idx < LOCATIONS.length - 1 && (
-                      <span className="w-1 h-1 rounded-full bg-[#C8A261]/60" />
+                      <span className="w-1 h-1 rounded-full bg-[#dd9b2a]/60" />
                     )}
                   </span>
                 ))}
@@ -94,7 +94,7 @@ export default function About() {
                     key={index}
                     className="flex flex-col items-start p-2 sm:p-2.5 border-r border-white/5 last:border-r-0"
                   >
-                    <Icon className="w-4 h-4 text-[#C8A261] mb-1" />
+                    <Icon className="w-4 h-4 text-[#f5ac2e] mb-1" />
                     <span className="text-[9px] sm:text-[10px] font-bold text-white tracking-wider uppercase leading-tight">
                       {item.title}
                     </span>
@@ -128,7 +128,7 @@ export default function About() {
 
                 {/* NOC Status Pill */}
                 <div className="absolute top-4 left-4 bg-[#0B0B0B]/85 border border-[#C8A261]/40 backdrop-blur-md px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-lg">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#C8A261]" />
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#f5ac2e]" />
                   <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-white">
                     NOC APPROVED
                   </span>
@@ -161,7 +161,7 @@ export default function About() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="absolute -bottom-6 right-6 sm:right-8 bg-[#121212]/95 border border-[#C8A261]/60 px-6 py-4 shadow-[0_20px_50px_rgba(0,0,0,0.95)] rounded-sm backdrop-blur-xl z-30"
               >
-                <div className="text-3xl sm:text-4xl font-bold text-[#C8A261] tracking-tight flex items-center">
+                <div className="text-3xl sm:text-4xl font-bold text-[#f5ac2e] tracking-tight flex items-center">
                   <AnimatedCounter target={5000} duration={2.5} />
                   <span>+</span>
                 </div>
@@ -182,8 +182,8 @@ export default function About() {
           >
             {/* Eyebrow Header */}
             <div className="flex items-center gap-2.5 mb-3">
-              <span className="h-[1px] w-8 bg-[#C8A261]" />
-              <span className="text-xs uppercase tracking-[0.25em] text-[#C8A261] font-semibold">
+              <span className="h-[1px] w-8 bg-[#dd9b2a]" />
+              <span className="text-xs uppercase tracking-[0.25em] text-[#f5ac2e] font-semibold">
                 ABOUT NOVA CITY
               </span>
             </div>
@@ -191,7 +191,7 @@ export default function About() {
             {/* Title */}
             <h2 className="text-3xl sm:text-5xl font-normal text-white tracking-tight leading-[1.15] mb-6">
               Pakistan&apos;s Most Anticipated{' '}
-              <span className="text-[#C8A261] font-semibold block sm:inline">Community</span>
+              <span className="text-[#f5ac2e] font-semibold block sm:inline">Community</span>
             </h2>
 
             {/* Paragraphs */}
@@ -222,7 +222,7 @@ export default function About() {
             <div>
               <Button
                 asChild
-                className="bg-[#C8A261] hover:bg-[#b08d4f] text-[#0B0B0B] font-semibold text-xs tracking-[0.15em] uppercase px-8 h-12 rounded-none transition-all duration-300 shadow-[0_0_20px_rgba(200,162,97,0.2)] hover:shadow-[0_0_25px_rgba(200,162,97,0.35)] group"
+                className="bg-[#dd9b2a] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.15em] uppercase px-8 h-12 rounded-none transition-all duration-300 shadow-[0_0_20px_rgba(200,162,97,0.2)] hover:shadow-[0_0_25px_rgba(200,162,97,0.35)] group"
               >
                 <Link href="#about" className="flex items-center gap-2">
                   <span>LEARN MORE</span>

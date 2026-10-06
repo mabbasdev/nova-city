@@ -29,14 +29,14 @@ export default function NewsletterSection() {
 
                     <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
                         <div className="space-y-2 max-w-xl">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C8A261]/10 border border-[#C8A261]/30">
-                                <Sparkles className="w-3.5 h-3.5 text-[#C8A261]" />
-                                <span className="text-[10px] font-bold text-[#C8A261] uppercase tracking-[0.2em]">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#dd9b2a]/10 border border-[#C8A261]/30">
+                                <Sparkles className="w-3.5 h-3.5 text-[#f5ac2e]" />
+                                <span className="text-[10px] font-bold text-[#f5ac2e] uppercase tracking-[0.2em]">
                                     EXECUTIVE DISPATCH
                                 </span>
                             </div>
                             <h3 className="text-2xl sm:text-3xl font-normal text-white tracking-tight">
-                                Get <span className="text-[#C8A261] font-semibold">VIP Priority</span> Plot Releases & Map Updates
+                                Get <span className="text-[#f5ac2e] font-semibold">VIP Priority</span> Plot Releases & Map Updates
                             </h3>
                             <p className="text-xs text-gray-400 leading-relaxed">
                                 Be the first to receive revised installment schedules, balloting schedules, and RDA / NOC approvals directly to your inbox.
@@ -45,7 +45,7 @@ export default function NewsletterSection() {
 
                         <div className="w-full lg:w-auto">
                             {subscribed ? (
-                                <div className="flex items-center gap-2 text-[#C8A261] text-xs font-semibold bg-[#C8A261]/10 border border-[#C8A261]/40 px-6 py-3.5 rounded-none">
+                                <div className="flex items-center gap-2 text-[#f5ac2e] text-xs font-semibold bg-[#dd9b2a]/10 border border-[#C8A261]/40 px-6 py-3.5 rounded-none">
                                     <CheckCircle2 className="w-4 h-4" />
                                     <span>Your email is registered for VIP announcements.</span>
                                 </div>
@@ -59,7 +59,7 @@ export default function NewsletterSection() {
                                     />
                                     <Button
                                         type="submit"
-                                        className="bg-[#C8A261] hover:bg-[#b08d4f] text-[#0B0B0B] font-semibold text-xs tracking-[0.18em] uppercase px-7 h-[46px] rounded-none transition-all duration-300 flex items-center justify-center gap-2"
+                                        className="bg-[#dd9b2a] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.18em] uppercase px-7 h-[46px] rounded-none transition-all duration-300 flex items-center justify-center gap-2"
                                     >
                                         <span>JOIN VIP</span>
                                         <Send className="w-3.5 h-3.5" />

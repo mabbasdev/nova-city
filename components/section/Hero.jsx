@@ -21,7 +21,6 @@ const SLIDES = [
         secondaryCta: { label: 'Discover More', href: '#about' },
         image:
             'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80',
-            // 'https://novacity.pk/wp-content/uploads/2026/07/Gemini_Generated_Image_c7clwtc7clwtc7cl.png',
     },
     {
         id: 2,
@@ -100,6 +99,19 @@ export default function Hero() {
         }
     };
 
+    // Helper for dynamic CTA button container alignment
+    const getCtaAlignmentClass = (layout) => {
+        switch (layout) {
+            case 'center':
+                return 'justify-center';
+            case 'right':
+                return 'justify-end';
+            case 'left':
+            default:
+                return 'justify-start';
+        }
+    };
+
     return (
         <section
             className="relative h-screen min-h-[680px] w-full overflow-hidden bg-[#0B0B0B]"
@@ -162,13 +174,13 @@ export default function Hero() {
                             {/* Subtitle / Eyebrow */}
                             {slide.subtitle && (
                                 <motion.div
-                                    initial={{ opacity: 0, x: slide.layout === 'right' ? 20 : -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.3 }}
                                     className="flex items-center gap-2 mb-3"
                                 >
-                                    <span className="h-[1px] w-8 bg-[#C8A261]" />
-                                    <span className="text-xs uppercase tracking-[0.25em] text-[#C8A261] font-medium">
+                                    {/* <span className="h-[1px] w-8 bg-[#C8A261]" /> */}
+                                    <span className="text-xs uppercase tracking-[0.25em] text-[#f5ac2e] font-medium">
                                         {slide.subtitle}
                                     </span>
                                 </motion.div>
@@ -183,7 +195,7 @@ export default function Hero() {
                                     className="text-4xl sm:text-6xl lg:text-7xl font-normal text-white tracking-tight leading-[1.1] mb-5"
                                 >
                                     {slide.title.replace(slide.highlightText, '')}
-                                    <span className="text-[#C8A261] font-semibold">{slide.highlightText}</span>
+                                    <span className="text-[#f5ac2e] font-semibold">{slide.highlightText}</span>
                                 </motion.h1>
                             )}
 
@@ -204,32 +216,35 @@ export default function Hero() {
                                 initial={{ opacity: 0, y: 15 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.6 }}
-                                className={`flex flex-wrap items-center gap-4 ${slide.layout === 'center' ? 'justify-center' : ''
-                                    }`}
+                                className={`flex flex-wrap items-center gap-4 w-full ${getCtaAlignmentClass(slide.layout)}`}
                             >
+                                {/* Primary CTA Button */}
                                 {slide.primaryCta && (
                                     <Button
                                         asChild
-                                        className="bg-[#C8A261] hover:bg-[#b08d4f] text-[#0B0B0B] font-semibold text-xs tracking-[0.15em] uppercase px-7 h-12 rounded-none transition-all duration-300 shadow-[0_0_20px_rgba(200,162,97,0.25)] group"
+                                        className="relative overflow-hidden bg-[#f5ac2e] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.15em] uppercase px-7 h-12 rounded-none transition-all duration-300 group"
                                     >
                                         <Link href={slide.primaryCta.href} className="flex items-center gap-2">
-                                            <span>{slide.primaryCta.label}</span>
-                                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                            <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-in-out pointer-events-none" />
+                                            <span className="relative z-10">{slide.primaryCta.label}</span>
+                                            <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
                                         </Link>
                                     </Button>
                                 )}
 
+                                {/* Secondary CTA Button */}
                                 {slide.secondaryCta && (
                                     <Button
                                         asChild
                                         variant="outline"
-                                        className="border-white/30 hover:border-[#C8A261] bg-black/40 hover:bg-black/60 text-white font-medium text-xs tracking-[0.15em] uppercase px-7 h-12 rounded-none backdrop-blur-sm transition-all duration-300"
+                                        className="relative overflow-hidden border-white/30 hover:border-[#C8A261] bg-black/40 hover:bg-black/70 text-white hover:text-[#f5ac2e] font-medium text-xs tracking-[0.15em] uppercase px-7 h-12 rounded-none backdrop-blur-sm transition-all duration-300 group"
                                     >
                                         <Link href={slide.secondaryCta.href} className="flex items-center gap-2">
+                                            <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-in-out pointer-events-none" />
                                             {slide.secondaryCta.label.includes('Video') && (
-                                                <Play className="w-3.5 h-3.5 fill-[#C8A261] text-[#C8A261]" />
+                                                <Play className="w-3.5 h-3.5 fill-[#C8A261] text-[#f5ac2e] relative z-10 group-hover:scale-110 transition-transform" />
                                             )}
-                                            <span>{slide.secondaryCta.label}</span>
+                                            <span className="relative z-10">{slide.secondaryCta.label}</span>
                                         </Link>
                                     </Button>
                                 )}
@@ -256,12 +271,12 @@ export default function Hero() {
                         >
                             <span
                                 className={`h-0.5 transition-all duration-500 ${currentSlide === index
-                                        ? 'w-10 bg-[#C8A261]'
-                                        : 'w-4 bg-white/30 group-hover:bg-white/60'
+                                    ? 'w-10 bg-[#dd9b2a]'
+                                    : 'w-4 bg-white/30 group-hover:bg-white/60'
                                     }`}
                             />
                             <span
-                                className={`text-[11px] font-medium transition-colors ${currentSlide === index ? 'text-[#C8A261]' : 'text-gray-500'
+                                className={`text-[11px] font-medium transition-colors ${currentSlide === index ? 'text-[#f5ac2e]' : 'text-gray-500'
                                     }`}
                             >
                                 0{index + 1}
@@ -274,14 +289,14 @@ export default function Hero() {
                 <div className="flex items-center gap-2">
                     <button
                         onClick={prevSlide}
-                        className="w-10 h-10 rounded-full border border-white/15 bg-black/30 hover:bg-[#C8A261] text-white hover:text-[#0B0B0B] hover:border-[#C8A261] transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
+                        className="w-10 h-10 rounded-full border border-white/15 bg-black/30 hover:bg-[#dd9b2a] text-white hover:text-[#0B0B0B] hover:border-[#C8A261] transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
                         aria-label="Previous Slide"
                     >
                         <ChevronLeft className="w-5 h-5" />
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="w-10 h-10 rounded-full border border-white/15 bg-black/30 hover:bg-[#C8A261] text-white hover:text-[#0B0B0B] hover:border-[#C8A261] transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
+                        className="w-10 h-10 rounded-full border border-white/15 bg-black/30 hover:bg-[#dd9b2a] text-white hover:text-[#0B0B0B] hover:border-[#C8A261] transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
                         aria-label="Next Slide"
                     >
                         <ChevronRight className="w-5 h-5" />

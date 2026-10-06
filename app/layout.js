@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${jost.variable} dark h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans bg-[#0B0B0B] text-[#E5E5E5] selection:bg-[#C8A261] selection:text-[#0B0B0B]">
+      <body className="min-h-full flex flex-col font-sans bg-[#0B0B0B] text-[#E5E5E5] selection:bg-[#dd9b2a] selection:text-[#0B0B0B]">
         {children}
       </body>
     </html>

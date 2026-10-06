@@ -50,7 +50,7 @@ export default function Faq() {
     <section id="faq" className="py-28 bg-[#070707] text-[#E5E5E5] relative overflow-hidden border-t border-b border-white/5">
       {/* Visual Break: Deep Atmospheric Ambient Light (No Grid Lines) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-[#C8A261]/40 to-transparent" />
-      <div className="absolute top-1/2 left-[-10%] w-[550px] h-[550px] bg-[#C8A261]/5 blur-[200px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-[-10%] w-[550px] h-[550px] bg-[#dd9b2a]/5 blur-[200px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -64,15 +64,15 @@ export default function Faq() {
             className="lg:col-span-5 lg:sticky lg:top-28 self-start flex flex-col justify-between"
           >
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#C8A261]/40 bg-[#C8A261]/10 mb-4">
-                <Sparkles className="w-3.5 h-3.5 text-[#C8A261]" />
-                <span className="text-[10px] uppercase tracking-[0.25em] text-[#C8A261] font-bold">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#C8A261]/40 bg-[#dd9b2a]/10 mb-4">
+                <Sparkles className="w-3.5 h-3.5 text-[#f5ac2e]" />
+                <span className="text-[10px] uppercase tracking-[0.25em] text-[#f5ac2e] font-bold">
                   COMMON QUESTIONS
                 </span>
               </div>
 
               <h2 className="text-3xl sm:text-5xl font-normal text-white tracking-tight leading-[1.15] mb-6">
-                Frequently Asked <span className="text-[#C8A261] font-semibold block">Questions</span>
+                Frequently Asked <span className="text-[#f5ac2e] font-semibold block">Questions</span>
               </h2>
 
               <p className="text-gray-400 text-sm sm:text-base font-normal leading-relaxed mb-8">
@@ -88,7 +88,7 @@ export default function Faq() {
               <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#C8A261]" />
 
               <div className="flex items-center justify-between mb-4">
-                <div className="p-3 bg-[#151515] border border-white/10 group-hover:border-[#C8A261]/50 rounded-sm text-[#C8A261] transition-all duration-300">
+                <div className="p-3 bg-[#151515] border border-white/10 group-hover:border-[#C8A261]/50 rounded-sm text-[#f5ac2e] transition-all duration-300">
                   <Headset className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 
@@ -101,7 +101,7 @@ export default function Faq() {
               </div>
 
               <div className="mb-5">
-                <h4 className="text-base font-semibold text-white group-hover:text-[#C8A261] transition-colors">
+                <h4 className="text-base font-semibold text-white group-hover:text-[#f5ac2e] transition-colors">
                   Have a specific question?
                 </h4>
                 <p className="text-xs text-gray-400 mt-1 leading-relaxed">
@@ -111,7 +111,7 @@ export default function Faq() {
 
               <Button
                 asChild
-                className="w-full bg-[#C8A261] hover:bg-[#b08d4f] text-[#0B0B0B] font-semibold text-xs tracking-[0.15em] uppercase h-12 rounded-none transition-all duration-300 shadow-[0_0_20px_rgba(200,162,97,0.2)] group"
+                className="w-full bg-[#dd9b2a] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.15em] uppercase h-12 rounded-none transition-all duration-300 shadow-[0_0_20px_rgba(200,162,97,0.2)] group"
               >
                 <Link href="#contact" className="flex items-center justify-center gap-2">
                   <span>TALK TO AN EXPERT</span>
@@ -142,7 +142,7 @@ export default function Faq() {
                 >
                   <div
                     className={`absolute left-0 top-0 bottom-0 w-1 transition-all duration-300 ${
-                      isOpen ? 'bg-[#C8A261]' : 'bg-transparent group-hover:bg-[#C8A261]/40'
+                      isOpen ? 'bg-[#dd9b2a]' : 'bg-transparent group-hover:bg-[#dd9b2a]/40'
                     }`}
                   />
 
@@ -152,22 +152,22 @@ export default function Faq() {
                   >
                     <div className="flex flex-col gap-1">
                       <div className="flex items-center gap-3">
-                        <span className={`text-xs font-mono font-bold transition-colors ${isOpen ? 'text-[#C8A261]' : 'text-gray-500'}`}>
+                        <span className={`text-xs font-mono font-bold transition-colors ${isOpen ? 'text-[#f5ac2e]' : 'text-gray-500'}`}>
                           {faq.id}
                         </span>
-                        <span className="text-[9px] uppercase tracking-[0.2em] font-semibold text-[#C8A261]/80">
+                        <span className="text-[9px] uppercase tracking-[0.2em] font-semibold text-[#f5ac2e]/80">
                           {faq.category}
                         </span>
                       </div>
                       
-                      <span className={`text-base sm:text-lg font-medium transition-colors ${isOpen ? 'text-[#C8A261]' : 'text-white group-hover:text-[#C8A261]'}`}>
+                      <span className={`text-base sm:text-lg font-medium transition-colors ${isOpen ? 'text-[#f5ac2e]' : 'text-white group-hover:text-[#f5ac2e]'}`}>
                         {faq.question}
                       </span>
                     </div>
 
                     <div className={`p-2 rounded-full border transition-all duration-300 flex-shrink-0 ${
                       isOpen 
-                        ? 'border-[#C8A261] text-[#C8A261] bg-[#C8A261]/15 rotate-180' 
+                        ? 'border-[#C8A261] text-[#f5ac2e] bg-[#dd9b2a]/15 rotate-180' 
                         : 'border-white/10 text-gray-400 bg-white/5 group-hover:border-[#C8A261]/50 group-hover:text-white'
                     }`}>
                       <ChevronDown className="w-4 h-4" />
@@ -184,7 +184,7 @@ export default function Faq() {
                       >
                         <div className="px-5 sm:px-6 pb-6 pt-0 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/5 font-normal pl-7">
                           <p className="pt-4">{faq.answer}</p>
-                          <div className="mt-4 flex items-center gap-2 text-[10px] text-[#C8A261] font-semibold uppercase tracking-wider">
+                          <div className="mt-4 flex items-center gap-2 text-[10px] text-[#f5ac2e] font-semibold uppercase tracking-wider">
                             <CheckCircle2 className="w-3.5 h-3.5" />
                             <span>Verified Official Information</span>
                           </div>
@@ -200,7 +200,7 @@ export default function Faq() {
               <Button
                 asChild
                 variant="outline"
-                className="border-[#C8A261]/50 text-[#C8A261] hover:bg-[#C8A261] hover:text-[#0B0B0B] font-semibold text-xs tracking-[0.15em] uppercase px-8 h-12 rounded-none transition-all duration-300"
+                className="border-[#C8A261]/50 text-[#f5ac2e] hover:bg-[#dd9b2a] hover:text-[#0B0B0B] font-semibold text-xs tracking-[0.15em] uppercase px-8 h-12 rounded-none transition-all duration-300"
               >
                 <Link href="#all-faqs" className="flex items-center gap-2">
                   <span>VIEW ALL FAQS</span>
