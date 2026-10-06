@@ -64,7 +64,7 @@ export default function SiteVisitCTA() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="relative p-8 sm:p-14 bg-[#0D0D0D]/85 border border-white/10 rounded-sm backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.85)] group hover:border-[#C8A261]/60 transition-all duration-700"
+                        className="relative p-8 sm:p-14 bg-[#0D0D0D]/85 border border-white/10 rounded-sm backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.85)] hover:border-[#C8A261]/60 transition-all duration-700"
                     >
                         {/* Gold Corner Frame Accents */}
                         <div className="absolute -top-1.5 -left-1.5 w-4 h-4 border-t-2 border-l-2 border-[#C8A261]" />
@@ -90,24 +90,28 @@ export default function SiteVisitCTA() {
                             Visit our development site and sales office — experience the rapid ground progress, grand entrance gate, and road infrastructure firsthand. Let the development speak for itself.
                         </p>
 
-                        {/* CTAs Group */}
+                        {/* CTAs Group with Independent Shine */}
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                            {/* Primary CTA */}
                             <Button
                                 onClick={() => setIsModalOpen(true)}
-                                className="w-full sm:w-auto bg-[#dd9b2a] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.18em] uppercase px-9 h-14 rounded-none transition-all duration-300 shadow-[0_0_25px_rgba(200,162,97,0.3)] hover:shadow-[0_0_35px_rgba(200,162,97,0.5)] group flex items-center justify-center gap-3"
+                                className="relative overflow-hidden w-full sm:w-auto bg-[#dd9b2a] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.18em] uppercase px-9 h-14 rounded-none transition-all duration-300 shadow-[0_0_25px_rgba(200,162,97,0.3)] hover:shadow-[0_0_35px_rgba(200,162,97,0.5)] group flex items-center justify-center gap-3"
                             >
-                                <span>BOOK SITE VISIT NOW</span>
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-in-out pointer-events-none" />
+                                <span className="relative z-10">BOOK SITE VISIT NOW</span>
+                                <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
                             </Button>
 
+                            {/* Secondary Call CTA */}
                             <Button
                                 asChild
                                 variant="outline"
-                                className="w-full sm:w-auto border-white/20 hover:border-[#C8A261] text-white hover:text-[#f5ac2e] hover:bg-white/5 font-semibold text-xs tracking-[0.18em] uppercase px-8 h-14 rounded-none transition-all duration-300 flex items-center justify-center gap-2"
+                                className="relative overflow-hidden w-full sm:w-auto border-white/20 hover:border-[#C8A261] text-white hover:text-[#f5ac2e] hover:bg-white/5 font-semibold text-xs tracking-[0.18em] uppercase px-8 h-14 rounded-none transition-all duration-300 group flex items-center justify-center gap-2"
                             >
                                 <a href="tel:+923000000000">
-                                    <PhoneCall className="w-4 h-4 text-[#f5ac2e]" />
-                                    <span>CALL ADVISOR DIRECT</span>
+                                    <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-in-out pointer-events-none" />
+                                    <PhoneCall className="w-4 h-4 text-[#f5ac2e] relative z-10" />
+                                    <span className="relative z-10">CALL ADVISOR DIRECT</span>
                                 </a>
                             </Button>
                         </div>
@@ -242,11 +246,13 @@ export default function SiteVisitCTA() {
                                         </select>
                                     </div>
 
+                                    {/* Modal Action CTA with Shine */}
                                     <Button
                                         type="submit"
-                                        className="w-full bg-[#dd9b2a] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.18em] uppercase h-12 rounded-none transition-all duration-300 mt-4"
+                                        className="relative overflow-hidden w-full bg-[#dd9b2a] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.18em] uppercase h-12 rounded-none transition-all duration-300 mt-4 group"
                                     >
-                                        CONFIRM APPOINTMENT
+                                        <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-in-out pointer-events-none" />
+                                        <span className="relative z-10">CONFIRM APPOINTMENT</span>
                                     </Button>
                                 </form>
                             )}

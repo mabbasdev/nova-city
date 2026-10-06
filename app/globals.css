@@ -85,3 +85,38 @@
     transform: skewX(-12deg) translateX(300%);
   }
 }
+
+/* Custom Scrollbar Styles for Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070707;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+  border-radius: 9999px;
+  border: 2px solid #070707;
+  transition: all 0.3s ease;
+}
+
+/* Hover Shine & Gold Accent State */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #dd9b2a 0%, #f5ac2e 50%, #C8A261 100%);
+  box-shadow: 0 0 12px rgba(200, 162, 97, 0.6);
+}
+
+/* Scrollbar buttons/arrows styling */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Firefox Scrollbar Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1e1e1e #070707;
+}

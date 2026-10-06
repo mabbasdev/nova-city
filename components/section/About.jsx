@@ -50,13 +50,13 @@ function AnimatedCounter({ target = 5000, duration = 2 }) {
 
 export default function About() {
   return (
-    <section id="about" className="py-28 bg-[#0B0B0B] text-[#E5E5E5] relative overflow-hidden">
+    <section id="about" className="py-16 sm:py-28 bg-[#0B0B0B] text-[#E5E5E5] relative overflow-hidden">
       {/* Background Ambient Glow */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#dd9b2a]/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-[#dd9b2a]/10 blur-[120px] sm:blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          
+
           {/* Left Column: Balanced Height Layout */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -66,39 +66,39 @@ export default function About() {
             className="lg:col-span-6 relative flex flex-col justify-between"
           >
             {/* Top Bar: Strategic Connectivity Locations */}
-            <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
+            <div className="mb-4 flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-3 gap-2">
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#f5ac2e]" />
-                <span className="text-[10px] uppercase tracking-[0.25em] text-[#f5ac2e] font-semibold">
+                <MapPin className="w-3.5 h-3.5 text-[#f5ac2e] shrink-0" />
+                <span className="text-[10px] uppercase tracking-[0.25em] text-[#f5ac2e] font-semibold whitespace-nowrap">
                   STRATEGIC CONNECTIVITY
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-[10px] text-gray-400 font-medium tracking-[0.18em]">
+              <div className="flex items-center gap-2 text-[9px] sm:text-[10px] text-gray-400 font-medium tracking-[0.15em] sm:tracking-[0.18em] overflow-x-auto no-scrollbar py-0.5">
                 {LOCATIONS.map((loc, idx) => (
-                  <span key={loc} className="flex items-center gap-2">
+                  <span key={loc} className="flex items-center gap-2 shrink-0">
                     <span>{loc}</span>
                     {idx < LOCATIONS.length - 1 && (
-                      <span className="w-1 h-1 rounded-full bg-[#dd9b2a]/60" />
+                      <span className="w-1 h-1 rounded-full bg-[#dd9b2a]/60 shrink-0" />
                     )}
                   </span>
                 ))}
               </div>
             </div>
 
-            {/* PREVIOUSLY RED EMPTY AREA: Luxury Architectural Highlight Bar Grid */}
-            <div className="grid grid-cols-3 gap-2 mb-4 p-2 bg-[#121212]/80 border border-white/10 rounded-sm backdrop-blur-md">
+            {/* Architectural Highlight Bar Grid */}
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-2 mb-4 p-2 bg-[#121212]/80 border border-white/10 rounded-sm backdrop-blur-md">
               {HIGHLIGHTS.map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={index}
-                    className="flex flex-col items-start p-2 sm:p-2.5 border-r border-white/5 last:border-r-0"
+                    className="flex flex-col items-start p-1.5 sm:p-2.5 border-r border-white/5 last:border-r-0"
                   >
-                    <Icon className="w-4 h-4 text-[#f5ac2e] mb-1" />
-                    <span className="text-[9px] sm:text-[10px] font-bold text-white tracking-wider uppercase leading-tight">
+                    <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#f5ac2e] mb-1" />
+                    <span className="text-[8px] sm:text-[10px] font-bold text-white tracking-wider uppercase leading-tight">
                       {item.title}
                     </span>
-                    <span className="text-[8px] text-gray-400 font-medium tracking-wide mt-0.5">
+                    <span className="text-[7.5px] sm:text-[8px] text-gray-400 font-medium tracking-wide mt-0.5 hidden xs:block">
                       {item.subtitle}
                     </span>
                   </div>
@@ -106,8 +106,8 @@ export default function About() {
               })}
             </div>
 
-            {/* Main Image Frame aligned cleanly with right column */}
-            <div className="relative p-3 sm:p-4">
+            {/* Main Image Frame */}
+            <div className="relative p-2 sm:p-4 mb-8 sm:mb-0">
               {/* Outer Wireframe Borders & Gold Accent Corners */}
               <div className="absolute inset-0 border border-[#C8A261]/30 rounded-sm pointer-events-none bg-gradient-to-br from-[#C8A261]/5 via-transparent to-transparent" />
               <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#C8A261]" />
@@ -127,9 +127,9 @@ export default function About() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B]/85 via-transparent to-black/20" />
 
                 {/* NOC Status Pill */}
-                <div className="absolute top-4 left-4 bg-[#0B0B0B]/85 border border-[#C8A261]/40 backdrop-blur-md px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-lg">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#f5ac2e]" />
-                  <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-white">
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-[#0B0B0B]/85 border border-[#C8A261]/40 backdrop-blur-md px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full flex items-center gap-1.5 sm:gap-2 shadow-lg">
+                  <ShieldCheck className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#f5ac2e]" />
+                  <span className="text-[8.5px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.2em] font-semibold text-white">
                     NOC APPROVED
                   </span>
                 </div>
@@ -159,13 +159,13 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="absolute -bottom-6 right-6 sm:right-8 bg-[#121212]/95 border border-[#C8A261]/60 px-6 py-4 shadow-[0_20px_50px_rgba(0,0,0,0.95)] rounded-sm backdrop-blur-xl z-30"
+                className="absolute -bottom-4 right-3 sm:-bottom-6 sm:right-8 bg-[#121212]/95 border border-[#C8A261]/60 px-4 sm:px-6 py-2.5 sm:py-4 shadow-[0_20px_50px_rgba(0,0,0,0.95)] rounded-sm backdrop-blur-xl z-30"
               >
-                <div className="text-3xl sm:text-4xl font-bold text-[#f5ac2e] tracking-tight flex items-center">
+                <div className="text-2xl sm:text-4xl font-bold text-[#f5ac2e] tracking-tight flex items-center">
                   <AnimatedCounter target={5000} duration={2.5} />
                   <span>+</span>
                 </div>
-                <div className="text-[10px] text-gray-300 font-semibold uppercase tracking-[0.22em] mt-0.5">
+                <div className="text-[8.5px] sm:text-[10px] text-gray-300 font-semibold uppercase tracking-[0.2em] sm:tracking-[0.22em] mt-0.5">
                   PLOTS RESERVED
                 </div>
               </motion.div>
@@ -182,20 +182,20 @@ export default function About() {
           >
             {/* Eyebrow Header */}
             <div className="flex items-center gap-2.5 mb-3">
-              <span className="h-[1px] w-8 bg-[#dd9b2a]" />
+              {/* <span className="h-[1px] w-8 bg-[#dd9b2a]" /> */}
               <span className="text-xs uppercase tracking-[0.25em] text-[#f5ac2e] font-semibold">
                 ABOUT NOVA CITY
               </span>
             </div>
 
             {/* Title */}
-            <h2 className="text-3xl sm:text-5xl font-normal text-white tracking-tight leading-[1.15] mb-6">
+            <h2 className="text-2xl sm:text-5xl font-normal text-white tracking-tight leading-[1.15] mb-5 sm:mb-6">
               Pakistan&apos;s Most Anticipated{' '}
               <span className="text-[#f5ac2e] font-semibold block sm:inline">Community</span>
             </h2>
 
             {/* Paragraphs */}
-            <div className="space-y-4 text-sm sm:text-base text-gray-300 font-normal leading-relaxed mb-8">
+            <div className="space-y-3 sm:space-y-4 text-xs sm:text-base text-gray-300 font-normal leading-relaxed mb-6 sm:mb-8">
               <p>
                 NOVA City is a meticulously master-planned residential community on Main GT Road, offering an unparalleled standard of living within easy reach of Pakistan&apos;s capital.
               </p>
@@ -205,28 +205,29 @@ export default function About() {
             </div>
 
             {/* Stat Grid */}
-            <div className="grid grid-cols-2 gap-y-6 gap-x-6 py-6 border-y border-white/10 mb-8">
+            <div className="grid grid-cols-2 gap-y-4 sm:gap-y-6 gap-x-4 sm:gap-x-6 py-4 sm:py-6 border-y border-white/10 mb-6 sm:mb-8">
               {STATS.map((stat, idx) => (
-                <div key={idx} className="border-l-2 border-[#C8A261] pl-4">
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-medium mb-1">
+                <div key={idx} className="border-l-2 border-[#C8A261] pl-3 sm:pl-4">
+                  <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.2em] text-gray-400 font-medium mb-1">
                     {stat.label}
                   </div>
-                  <div className="text-sm sm:text-base font-semibold text-white tracking-wide">
+                  <div className="text-xs sm:text-base font-semibold text-white tracking-wide">
                     {stat.value}
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* CTA Button */}
+            {/* CTA Button without box-shadow glow */}
             <div>
               <Button
                 asChild
-                className="bg-[#dd9b2a] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.15em] uppercase px-8 h-12 rounded-none transition-all duration-300 shadow-[0_0_20px_rgba(200,162,97,0.2)] hover:shadow-[0_0_25px_rgba(200,162,97,0.35)] group"
+                className="relative overflow-hidden bg-[#f5ac2e] hover:bg-[#dd9b2a] text-[#0B0B0B] font-semibold text-xs tracking-[0.15em] uppercase px-8 h-12 rounded-none transition-all duration-300 group w-full sm:w-auto"
               >
-                <Link href="#about" className="flex items-center gap-2">
-                  <span>LEARN MORE</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <Link href="#about" className="flex items-center justify-center gap-2">
+                  <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-in-out pointer-events-none" />
+                  <span className="relative z-10">LEARN MORE</span>
+                  <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
             </div>
