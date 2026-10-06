@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import {
     MapPin,
     Phone,
@@ -87,15 +88,23 @@ export default function Footer() {
 
                     {/* Brand Info */}
                     <div className="lg:col-span-4 space-y-6">
-                        <Link href="/" className="inline-flex items-center gap-4 group">
-                            <div className="w-12 h-12 border border-[#C8A261] flex items-center justify-center transform rotate-45 bg-[#dd9b2a]/10">
-                                <span className="transform -rotate-45 font-mono text-sm font-bold text-[#f5ac2e]">NC</span>
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-2xl font-bold tracking-[0.2em] text-white uppercase font-serif group-hover:text-[#f5ac2e] transition-colors">
+                        <Link href="/" className="inline-flex items-center gap-3.5 sm:gap-4 group">
+                            {/* Scaled SVG Logo matching text height */}
+                            <Image
+                                src="/logo-icon.svg"
+                                alt="Nova City Logo"
+                                width={48}
+                                height={48}
+                                className="w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 object-contain group-hover:scale-105 transition-transform duration-300 flex-shrink-0"
+                                priority
+                            />
+
+                            {/* Standardized Typography */}
+                            <div className="flex flex-col justify-center">
+                                <span className="font-semibold text-white tracking-[0.22em] text-lg sm:text-xl leading-none group-hover:text-[#f5ac2e] transition-colors font-sans">
                                     NOVA CITY
                                 </span>
-                                <span className="text-xs tracking-[0.4em] text-[#f5ac2e] font-semibold uppercase">
+                                <span className="text-[10px] sm:text-[11px] text-[#f5ac2e] tracking-[0.28em] font-medium uppercase mt-1 leading-none font-sans">
                                     ISLAMABAD
                                 </span>
                             </div>
